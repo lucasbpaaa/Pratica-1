@@ -1,0 +1,19 @@
+from math import pi, e
+
+class MYTOOLS:
+    def PI_INT(n):
+        decimals = pi - 3 #Aqui teremos decimals = 0.14159...
+        str_pi = '{:.' + str(n) + 'f}' #Queremos usar as n primeiras casas decimais, então vamos levar n em ':.nf'
+        final_pi = str_pi.format(decimals)[2:] #Sabemos que decimals = 0.13159..., mas só queremos os decimais, vamos aqui olhar só para a string '14159...'
+        
+        form_pi = "As {} primeiras casas decimais de pi são {}".format(n, final_pi)
+        return form_pi
+    
+    def E_INT(n):
+        decimals = e - 2 #Aqui teremos decimals = 0.71828...
+        str_e = '{:.' + str(n) + 'f}' #Queremos usar as n primeiras casas decimais, então vamos levar n em ':.nf'
+        final_e = str_e.format(decimals)[2:] #Sabemos que decimals = 0.71828..., mas só queremos os decimais, vamos aqui olhar só para a string '14159...'
+        form_e = "As {} primeiras casas decimais de e são {}".format(n, final_e)
+        return form_e
+print(MYTOOLS.PI_INT(100))
+print(MYTOOLS.E_INT(100))
